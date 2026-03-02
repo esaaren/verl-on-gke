@@ -93,7 +93,7 @@ gcloud container clusters create ${CLUSTER_NAME} \
     --enable-multi-networking \
     --no-enable-autoupgrade \
     --addons=GcsFuseCsiDriver \
-    --machine-type="e2-standard-8" \
+    --machine-type="c2-standard-16" \
     --num-nodes=3 \
     --enable-autoscaling \
     --min-nodes=3 \

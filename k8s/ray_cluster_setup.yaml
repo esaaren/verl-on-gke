@@ -29,7 +29,7 @@ spec:
       spec:
         serviceAccountName: erik-ksa
         nodeSelector:
-          cloud.google.com/gke-nodepool: "pool-2"
+          cloud.google.com/gke-nodepool: "default-pool"
         containers:
         - name: ray-head
           image: verlai/verl:vllm011.latest 
