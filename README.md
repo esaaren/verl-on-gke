@@ -113,6 +113,13 @@ python3 examples/data_preprocess/gsm8k.py --local_save_dir ~/data/gsm8k
 gcloud storage cp ~/data/gsm8k/* $GSBUCKET 
 ```
 
+Create the Ray operator
+```bash
+helm repo add kuberay https://ray-project.github.io/kuberay-helm/
+helm repo update
+helm install kuberay-operator kuberay/kuberay-operator --version 1.5.1
+```
+
 Create the Ray cluster
 ```bash
 cd $REPO_ROOT/k8s 
