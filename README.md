@@ -113,6 +113,12 @@ python3 examples/data_preprocess/gsm8k.py --local_save_dir ~/data/gsm8k
 gcloud storage cp ~/data/gsm8k/* $GSBUCKET 
 ```
 
+Create the Ray cluster
+```bash
+cd $REPO_ROOT/k8s 
+kubectl apply -f ray_cluster_setup.yaml
+```
+
 In another terminal, port forward to the head node
 ```bash
 kubectl port-forward svc/b200-ray-cluster-head-svc 8265:8265
